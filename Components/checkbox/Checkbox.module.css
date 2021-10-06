@@ -1,0 +1,17 @@
+.formControl {
+  width: 100%;
+}
+
+.radioGrooup {
+  width: 100%;
+}
+
+.MuiFormControl-root {
+  width: 100%;
+}
+
+.checkbox {
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  margin-top: 35px;
+}
+
+.footer .title {
+  color: #0000008a;
+  font-weight: lighter;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer .description {
+  font-size: 1.2rem;
+  font-weight: 100;
+}

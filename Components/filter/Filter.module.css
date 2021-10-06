@@ -1,0 +1,19 @@
+.coktailFilter {
+  width: 100%;
+  padding-top: 40px;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.coktailFilter li {
+  padding: 15px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.active {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 1rem;
+}

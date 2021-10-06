@@ -1,0 +1,30 @@
+.title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding-left: 25px;
+  transform: translateY(40px);
+}
+
+.swiper {
+  transform: translateY(70px);
+  overflow: hidden;
+}
+
+.swiper ul {
+  margin-left: 25px;
+  height: 185px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.swiper ul li {
+  max-width: 130px;
+  width: 100%;
+  margin-right: 15px;
+  max-height: 155px;
+  align-items: flex-end;
+}
+
+.SwiperSlide {
+  width: 130px;
+}

@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+
+.backIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lanSwitcher {
+  display: flex;
+  align-items: center;
+}
+
+.lanSwitcher h5 {
+  font-weight: 100;
+  margin-left: 5px;
+}

@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  z-index: 1000;
+}
+.bg {
+  width: 100%;
+  height: 315px;
+  position: relative;
+  border-bottom-right-radius: 40px;
+  background-color: #000;
+}
+
+.bgImage::before {
+  content: "";
+  background-image: url("../../Logos//bgImg.png");
+  background-position: right;
+  background-size: 100%;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+}
+
+.logo {
+  height: 100%;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.lanSwitcher {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lanSwitcher h3 {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.lanSwitcher img {
+  width: 100%;
+  max-width: 30px;
+  height: auto;
+}
+/* 
+@media (max-width: 36px) {
+  .bg {
+    border-bottom-right-radius: 40px;
+  }
+} */
