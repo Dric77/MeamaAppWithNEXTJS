@@ -14,41 +14,54 @@ import CakeSlider from "../Components/cake/CakeSlider.js";
 
 import styles from "../styles/Home.module.css";
 import MeamaProductSlider from "../Components/meamaProducts/MeamaProductSlider.js";
+import { useRouter } from "next/dist/client/router";
+import { HOME_PAGE } from "../routs.js";
+import ErrorPage from "./errorPage/ErrorPage.js";
 
 export default function Home() {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const [openModal, setOpenModal] = useState(false);
 
   let modalHandler = () => {
     setOpenModal(!openModal);
-    console.log(openModal);
   };
 
   useEffect(() => {
     const language = localStorage.getItem("choosed_language");
     if (language) {
       dispatch(getProducts(language));
+      router.push({
+        pathname: HOME_PAGE,
+        query: { language: language }
+      });
     } else {
       dispatch(getProducts("ka"));
+      router.push({
+        pathname: HOME_PAGE,
+        query: { language: "ka" }
+      });
     }
     dispatch(getLanguage());
   }, []);
 
   return (
-    <div className={styles.mainContainer}>
-      <Modal modalHandler={modalHandler} openModal={openModal} />
-      <HeaderBg>
-        <Container>
-          <Header modalHandler={modalHandler} />
-        </Container>
-        <HeaderSlider />
-      </HeaderBg>
-      <TeaSlider />
-      <CoktailSlider />
-      <CakeSlider />
-      <MeamaProductSlider />
-      <Footer />
-    </div>
+    <ErrorPage>
+      <div className={styles.mainContainer}>
+        <Modal modalHandler={modalHandler} openModal={openModal} />
+        <HeaderBg>
+          <Container>
+            <Header modalHandler={modalHandler} />
+          </Container>
+          <HeaderSlider />
+        </HeaderBg>
+        <TeaSlider />
+        <CoktailSlider />
+        <CakeSlider />
+        <MeamaProductSlider />
+        <Footer />
+      </div>
+    </ErrorPage>
   );
 }

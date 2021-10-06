@@ -13,7 +13,7 @@ function CakeSlider() {
   return (
     <div className={classes.mainContainer}>
       <span className={classes.title}>{data && data.name && data.name}</span>
-      <Swiper className={classes.swiper} wrapperTag="ul">
+      <Swiper className={classes.swiper} wrapperTag="ul" loop={false}>
         {data &&
           data.products &&
           data.products.map((data) => (

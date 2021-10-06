@@ -12,7 +12,7 @@ export default function RadioButtonsGroup({ hanldeLanguage }) {
 
   useEffect(() => {
     setChoosedLanguage(localStorage.getItem("choosed_language"));
-  }, []);
+  });
 
   return (
     <FormControl

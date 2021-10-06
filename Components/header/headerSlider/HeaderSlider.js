@@ -1,8 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
-
-import { SINGLE_PAGE } from "../../../routs.js";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { selectCoffe } from "../../../selectors.js";
@@ -12,6 +9,11 @@ import classes from "./HeaderSlider.module.css";
 
 function HeaderSlider() {
   const coffe = useSelector(selectCoffe);
+
+  const ref = useRef(null);
+  useEffect(() => {
+    console.log("width", ref.current ? ref.current.offsetWidth : 0);
+  }, [ref.current]);
 
   return (
     <>
